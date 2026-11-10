@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <title>Igreja BRESAN | Vínculos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-section="vinculos">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="eventos.html" aria-label="Igreja BRESAN, início">
+                <span><strong>Igreja BRESAN</strong></span>
+            </a>
+            <nav class="main-nav" aria-label="Menu principal">
+                <a class="nav-link" href="eventos.html"><span aria-hidden="true">◷</span> Eventos</a>
+                <a class="nav-link" href="ministerios.html"><span aria-hidden="true">♡</span> Ministérios</a>
+                <a class="nav-link" href="usuarios.html" data-managed-only hidden><span aria-hidden="true">♧</span> Usuários</a>
+                <a class="nav-link active" href="vinculos.html" data-managed-only hidden aria-current="page"><span aria-hidden="true">↔</span> Vínculos</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-button" type="button" data-logout>Sair da conta</button>
+            </div>
+        </aside>
+        <section class="workspace">
+            <header class="topbar">
+                <p class="welcome-line">Olá, <strong id="user-name">bem-vindo(a)</strong></p>
+            </header>
+            <main class="content">
+                <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+                <section id="section-vinculos" class="management-section active" aria-labelledby="vinculos-title">
+                    <div class="section-heading">
+                        <div>
+                            <h1 id="vinculos-title">Usuários por ministério</h1>
+                        </div>
+                        <button class="button button-primary" type="button" data-new="vinculos" data-managed-only hidden>
+                            + Vincular usuário
+                        </button>
+                    </div>
+                    <div class="toolbar">
+                        <span class="record-count" id="vinculos-count">0 vínculos</span>
+                        <input class="search-input" type="search" data-filter="vinculos"
+                            aria-label="Pesquisar vínculos" placeholder="Pesquisar usuários ou ministérios">
+                        <button class="button button-light refresh-button" type="button" data-refresh="vinculos">
+                            Atualizar lista
+                        </button>
+                    </div>
+                    <div id="vinculos-list" class="record-list"></div>
+                    <p id="vinculos-empty" class="empty-state" hidden>Nenhum vínculo cadastrado por enquanto.</p>
+                </section>
+            </main>
+        </section>
+    </div>
+    <dialog id="record-dialog" class="record-dialog">
+        <form id="record-form" class="dialog-card">
+            <div class="dialog-heading">
+                <h2 id="dialog-title">Novo vínculo</h2>
+                <button id="close-dialog" class="close-button" type="button" aria-label="Fechar">×</button>
+            </div>
+            <div id="dialog-fields" class="form-grid"></div>
+            <p id="dialog-message" class="form-message" role="status" aria-live="polite"></p>
+            <div class="dialog-actions">
+                <button class="button button-light" id="cancel-dialog" type="button">Cancelar</button>
+                <button class="button button-primary" id="save-record" type="submit">Salvar</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>

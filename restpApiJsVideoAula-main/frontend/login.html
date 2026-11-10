@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <title>Igreja BRESAN | Entrar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <main class="login-screen">
+        <section class="login-card" aria-labelledby="login-title">
+            <h1 id="login-title">Igreja BRESAN</h1>
+            <form id="login-form" class="form-stack">
+                <label for="login-email">E-mail</label>
+                <input id="login-email" name="email" type="email" autocomplete="username"
+                    placeholder="seu@email.com" required>
+                <label for="login-password">Senha</label>
+                <input id="login-password" name="senha" type="password"
+                    autocomplete="current-password" placeholder="Digite sua senha" required>
+                <button class="button button-primary login-button" type="submit">Entrar no painel</button>
+                <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
